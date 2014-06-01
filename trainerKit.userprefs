@@ -2,10 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="trainerKit\Window.cs">
     <Files>
-      <File FileName="trainerKit\PointerModel.cs" Line="11" Column="9" />
-      <File FileName="trainerKit\Window.cs" Line="1" Column="1" />
-      <File FileName="trainerKit\Helper\DllHelper.cs" Line="6" Column="6" />
-      <File FileName="trainerKit\Handler\WinApiHandler.cs" Line="13" Column="34" />
+      <File FileName="trainerKit\PointerModel.cs" Line="54" Column="110" />
+      <File FileName="trainerKit\Window.cs" Line="34" Column="19" />
+      <File FileName="trainerKit\Helper\DllHelper.cs" Line="1" Column="1" />
+      <File FileName="trainerKit\Handler\WinApiHandler.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

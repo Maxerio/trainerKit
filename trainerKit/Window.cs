@@ -18,13 +18,20 @@ namespace trainerKit
             private set;
         }
 
+        public string ProcessName 
+        {
+            get;
+            private set;
+        }
+
         /// <summary>
         /// '
         /// </summary>
         /// <param name="name">Name.</param>
-        public Window (string name)
+        public Window (string windowName, string processName)
         {
-            this.WindowName = name;
+            this.WindowName = windowName;
+            this.ProcessName = processName;
         }
 
         public bool IsWindowAvailable
@@ -67,7 +74,7 @@ namespace trainerKit
         {
             byte[] buffer = new byte[24];
             IntPtr tmp;
-            WinApiHandler.ReadProcessMemory(this.HProcHandle, (IntPtr)data.GetDmaAddress(this.WindowName, this.HProcHandle), buffer, 4, out tmp);
+            WinApiHandler.ReadProcessMemory(this.HProcHandle, (IntPtr)data.GetDmaAddress(this.ProcessName, this.HProcHandle), buffer, 4, out tmp);
             return buffer;
         }
 
@@ -79,7 +86,7 @@ namespace trainerKit
         {
             if (this.HProcHandle != IntPtr.Zero)
             {
-                WriteToMemory(this.HProcHandle, data.GetDmaAddress(this.WindowName, this.HProcHandle), data.Value);
+                WriteToMemory(this.HProcHandle, data.GetDmaAddress(this.ProcessName, this.HProcHandle), data.Value);
             }
         } 
     }

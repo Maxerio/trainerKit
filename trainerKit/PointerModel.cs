@@ -44,14 +44,14 @@ namespace trainerKit
         /// 
         /// </summary>
         /// <returns>The dma address.</returns>
-        /// <param name="windowName">Window name.</param>
+        /// <param name="processName">processName.</param>
         /// <param name="processHandle">Process handle.</param>
-        public UInt32 GetDmaAddress(string windowName, IntPtr processHandle)
+        public UInt32 GetDmaAddress(string processName, IntPtr processHandle)
         {
             if (this.dmaAddress == null) {
                 if (!string.IsNullOrWhiteSpace (this.DllName)) 
                 {
-                    this.internalBaseAddress = (UInt32)DllHelper.GetDllBaseAddress (this.DllName, windowName).ToInt32();
+                    this.internalBaseAddress = (UInt32)DllHelper.GetDllBaseAddress (this.DllName, processName).ToInt32();
                     this.internalBaseAddress += this.BaseAddress;
                 }
                 else
